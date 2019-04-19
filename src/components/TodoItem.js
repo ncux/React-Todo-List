@@ -20,11 +20,18 @@ class TodoItem extends Component {
 
     render() {
 
-        return (
-            <div style={ this.getStyle() }>
-                <h4>{ this.props.todo.title }</h4> { '  ' } <input type="checkbox" onChange={this.props.markCompleted}/>
+        const { id, title } = this.props.todo;
 
-            </div>
+        return (
+            <ul style={ this.getStyle() }>
+                <li>
+                    <input type="checkbox" onChange={ this.props.markCompleted.bind(this, id) }/>
+                    { '' } <p>{ title }</p>
+                    <button style={ buttonStyle }>X</button>
+                </li>
+
+
+            </ul>
         )
     }
 
@@ -34,6 +41,17 @@ class TodoItem extends Component {
 // PropTypes
 TodoItem.propTypes = {
     todo: PropTypes.object.isRequired
+};
+
+const buttonStyle = {
+    background: '#ff0000',
+    color: '#ffffff',
+    border: 'none',
+    padding: '5px 5px',
+    marginBottom: '2rem',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
 };
 
 const itemStyle = {
