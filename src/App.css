@@ -17,6 +17,31 @@ a {
 }
 
 
+.container {
+  padding: 0 1rem;
+}
+
+
+.button {
+  display: inline-block;
+  border: none;
+  background: #555555;
+  color: #ffffff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+
+.button:hover {
+  background: #666666;
+}
+
+
+.listStyle {
+  list-style: none;
+}
+
+
 /*.App {*/
 /*  text-align: center;*/
 /*}*/

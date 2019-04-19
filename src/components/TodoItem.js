@@ -24,10 +24,10 @@ class TodoItem extends Component {
 
         return (
             <ul style={ this.getStyle() }>
-                <li>
+                <li className="listStyle">
                     <input type="checkbox" onChange={ this.props.markCompleted.bind(this, id) }/>
                     { '' } <p>{ title }</p>
-                    <button style={ buttonStyle }>X</button>
+                    <button onClick={ this.props.deleteTodo.bind(this, id) } style={ buttonStyle }>X</button>
                 </li>
 
 
