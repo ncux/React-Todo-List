@@ -14,9 +14,6 @@ class TodoItem extends Component {
         };
     }
 
-    // markCompleted = (e) => {
-    //     console.log(this.props);
-    // };
 
     render() {
 
