@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-
 class TodoItem extends Component {
 
     getStyle() {
@@ -26,8 +25,6 @@ class TodoItem extends Component {
                     { '' } <p>{ title }</p>
                     <button onClick={ this.props.deleteTodo.bind(this, id) } style={ buttonStyle }>X</button>
                 </li>
-
-
             </ul>
         )
     }
@@ -37,8 +34,11 @@ class TodoItem extends Component {
 
 // PropTypes
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    markCompleted: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired
 };
+
 
 const buttonStyle = {
     background: '#ff0000',
